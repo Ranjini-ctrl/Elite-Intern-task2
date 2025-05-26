@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Webpage</title>
+
+  <!-- CSS Styling -->
+  <style>
+    b {
+      font-size: larger;
+    }
+    body {
+      background-color: rgb(0, 0, 0);
+      font-family: 'Brush Script MT', cursive;
+      margin: 0;
+      padding: 0;
+      height: auto;
+      background-size: auto
+    }
+    header {
+      background: rgb(188, 220, 241);
+      padding: 5px;
+      border-radius: 20px;
+      margin: 10px;
+    }
+    .circle {
+      display: inline-block;
+      border: 2px solid black;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background: rgb(218, 166, 166);
+      font-size: 25px;
+    }
+    header h1 {
+      display: flex;
+      align-items: center;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 50px;
+      margin-left: 50px;
+      margin-bottom: 0;
+      flex-wrap: wrap;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      background: #e0e0e0;
+      padding: 15px;
+      border-radius: 20px;
+      margin: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      font-size: large;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: rgb(5, 55, 88);
+    }
+
+    .box1, .box2, .box3 {
+      background-color: rgb(188, 220, 241);
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      max-width: 700px;
+      min-height: 140px;
+      border-radius: 20px;
+      margin: 15px auto 0;
+      padding: 20px;
+      font-size: x-large;
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+    }
+
+    /* Enlarged box effect */
+    .large {
+      transform: scale(1.2);
+      background-color: bisque;
+      margin:30px auto 30px;
+    }
+
+    footer {
+      background: rgb(188, 220, 241);
+      color: black;
+      text-align: center;
+      padding: 10px;
+      margin: 15px 10px 20px;
+      border-radius: 20px;
+      font-size: larger;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+        margin-left: 0;
+        justify-content: center;
+      }
+
+      .circle {
+        font-size: 20px;
+        padding: 8px 16px;
+        margin-bottom: 10px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .box1, .box2, .box3 {
+        font-size: large;
+        min-height: auto;
+        padding: 15px;
+
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><p class="circle">Task 2</p> Responsive Webpage</h1>
+  </header>
+
+  <nav>
+    <a href="#box1" onclick="enlargeBox('box1')">HTML</a>
+    <a href="#box2" onclick="enlargeBox('box2')">CSS</a>
+    <a href="#box3" onclick="enlargeBox('box3')">JS</a>
+  </nav>
+
+  <section id="box1" class="box1">
+    <p>🔹<b> HTML (HyperText Markup Language)<br></b>
+    It provides the structure of a webpage. Think of it as the skeleton that holds all the content like text, images, and links.</p>
+  </section>
+
+  <section id="box2" class="box2">
+    <p><b>🔹 CSS (Cascading Style Sheets)<br></b>
+    CSS styles the content defined by HTML. It controls layout, colors, fonts, and responsiveness—making the site visually appealing.</p>
+  </section>
+
+  <section id="box3" class="box3">
+    <p><b>🔹 JavaScript<br></b>
+    JavaScript adds life to the webpage. It allows interactivity like sliders, pop-ups, form validations, animations, and dynamic content updates.</p>
+  </section>
+
+  <footer>© 2025 Made by Ranjini S.</footer>
+
+  <!-- JavaScript -->
+  <script>
+    function enlargeBox(boxId) {
+      document.getElementById(boxId).classList.toggle("large");
+    }
+  </script>
+
+</body>
+</html>
